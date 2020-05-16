@@ -5,21 +5,27 @@
   </head>
   <body>
     <a-scene>
-      <!---speedy--->
-  
-    <a-entity camera look-controls wasd-controls="fly: true;" position="0 1.6 0"></a-entity>
-    <a-assets>
-      <img id="brick" src="https://cdn.shopify.com/s/files/1/0142/1757/6506/products/HJ09851.jpg?v=1562116568">
+     <!---speedy--->
+  <a-entity id="rig"
+        movement-controls="fly: true; speed: 3">
+    <a-entity camera
+          position="0 1.6 0"
+          look-controls></a-entity>
+  </a-entity>
+  <a-assets>
+     
       <img id="sky" src="https://pbs.twimg.com/media/DIxJmyUUQAA-jE-.jpg">
       <img id="sea" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/ea33baf3-ba67-4b98-89de-7c62445f421b/d36fa0t-283ba989-28a1-439d-8ffb-09eea88ffb50.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZWEzM2JhZjMtYmE2Ny00Yjk4LTg5ZGUtN2M2MjQ0NWY0MjFiXC9kMzZmYTB0LTI4M2JhOTg5LTI4YTEtNDM5ZC04ZmZiLTA5ZWVhODhmZmI1MC5qcGcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.xE8T_Yl9X_4aQmRWSdoDvAwaNBRAJalh22rFuW0JBGA">
+    <img id="brick" src="https://cdn.shopify.com/s/files/1/0142/1757/6506/products/HJ09851.jpg?v=1562116568">
+    <img id="floor" src="https://cdna.artstation.com/p/assets/images/images/009/291/482/large/oliver-hitchen-tileable-grass-x4.jpg?1518144203">
     </a-assets>
    
      <a-sky src="#sky"></a-sky>
     <a-plane src="#sea"
     position="0 -15 -4" width="1000" height="1000" color="#4287a9" rotation="-90 0 0">
     </a-plane>
-    <a-plane src="#brick"
-    position="0 -10 -50"width="150" height="150" color="gray" rotation="-90 0 0">
+    <a-plane src="#floor"
+    position="0 -10 -50"width="150" height="150" color="green" rotation="-90 0 0">
     </a-plane>
      
     <a-box src="#brick" position="0 -7 -60" depth="50" height=10 width="50" color="hsl(40,72%,70%)"></a-box>
@@ -144,56 +150,103 @@
     <a-cone position="-55 -3 -50" height="5" radius-bottom="4" radius-top="0" color="#17471b"></a-cone>
     <a-cone position="-55 -1 -50" height="5" radius-bottom="3.5" radius-top="0" color="#17471b"></a-cone>
     <a-cone position="-55 1 -50" height="5" radius-bottom="3" radius-top="0" color="#17471b"></a-cone>
-
-    </a-sphere>
-      <!---เมฆ1--->
+  //เมฆ1
         <a-box position="80 100 10" depth="30" height="10" width="50" color="#FFFFFF"
          animation="
       property: position; 
       to: 70 130 10; 
-      dur: 2000; 
+      dur: 8000; 
       easing:   easeInOutQuad; 
       loop: true;
       dir:alternate;
       " 
       ></a-box>
+    <a-box position="100 107 0" depth="30" height="10" width="50" color="#FFFFFF"
+         animation="
+      property: position; 
+      to: 90 137 0; 
+      dur: 8000; 
+      easing:   easeInOutQuad; 
+      loop: true;
+      dir:alternate;
+      " 
+      ></a-box>
+          
          
-     <!---เมฆ2--->
+     //เมฆ2
         <a-box position="-150 80 20" depth="30" height="10" width="50" color="#ffffff"
          animation="
       property: position; 
       to: -140 120 20; 
-      dur: 2000; 
+      dur: 8000; 
       easing:   easeInOutQuad; 
       loop: true;
       dir:alternate;
       " ></a-box>
-      <!--เมฆ3--->
+  <a-box position="-170 87 30" depth="30" height="10" width="50" color="#ffffff"
+         animation="
+      property: position; 
+      to: -160 127 30; 
+      dur: 8000; 
+      easing:   easeInOutQuad; 
+      loop: true;
+      dir:alternate;
+      " ></a-box>
+  
+        //เมฆ3
         <a-box position="-50 160 -60" depth="30" height="10" width="50" color="#FFFFFF"
          animation="
       property: position; 
       to: -50 130 -60; 
-      dur: 2000; 
+      dur: 8000; 
       easing:   easeInOutQuad; 
       loop: true;
       dir:alternate;
       " ></a-box>
-      <!---เมฆ4--->
+  <a-box position="-75 166 -65" depth="30" height="10" width="50" color="#FFFFFF"
+         animation="
+      property: position; 
+      to: -75 136 -65; 
+      dur: 8000; 
+      easing:   easeInOutQuad; 
+      loop: true;
+      dir:alternate;
+      " ></a-box>
+  <a-box position="-20 156 -55" depth="30" height="10" width="50" color="#FFFFFF"
+         animation="
+      property: position; 
+      to: -20 126 -55; 
+      dur: 8000; 
+      easing:   easeInOutQuad; 
+      loop: true;
+      dir:alternate;
+      " ></a-box>
+  
+         //เมฆ4
         <a-box position="10 120 -150" depth="30" height="10" width="50" color="#FFFFFF"
          animation="
       property: position; 
       to: 10 150 -150; 
-      dur: 2000; 
+      dur: 8000; 
       easing:   easeInOutQuad; 
       loop: true;
       dir:alternate;
       " ></a-box>
-   <!---sun--->
+      <a-box position="-20 127 -160" depth="30" height="10" width="50" color="#FFFFFF"
+         animation="
+      property: position; 
+      to: -20 157 -160; 
+      dur: 8000; 
+      easing:   easeInOutQuad; 
+      loop: true;
+      dir:alternate;
+      " ></a-box>
+   //sun
      <a-sphere position="20 300 -80" radius="20" color="hsl(7, 100%, 45%)"
        animation="
       property: position; 
       to: 20 250 -80; 
-      dur: 2000; 
+      dur: 5000; 
       easing:   easeInOutQuad; 
       loop: true;
       dir:alternate;"></a-sphere>
