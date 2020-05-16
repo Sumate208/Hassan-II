@@ -5,13 +5,9 @@
   </head>
   <body>
     <a-scene>
-     <!---speedy--->
-  <a-entity id="rig"
-        movement-controls="fly: true; speed: 3">
-    <a-entity camera
-          position="0 1.6 0"
-          look-controls></a-entity>
-  </a-entity>
+      <!---fly--->
+  
+    <a-entity camera look-controls wasd-controls="fly: true;" position="0 1.6 0"></a-entity>
   <a-assets>
      
       <img id="sky" src="https://pbs.twimg.com/media/DIxJmyUUQAA-jE-.jpg">
@@ -150,7 +146,7 @@
     <a-cone position="-55 -3 -50" height="5" radius-bottom="4" radius-top="0" color="#17471b"></a-cone>
     <a-cone position="-55 -1 -50" height="5" radius-bottom="3.5" radius-top="0" color="#17471b"></a-cone>
     <a-cone position="-55 1 -50" height="5" radius-bottom="3" radius-top="0" color="#17471b"></a-cone>
-  //เมฆ1
+  <!---เมฆ1--->
         <a-box position="80 100 10" depth="30" height="10" width="50" color="#FFFFFF"
          animation="
       property: position; 
@@ -173,10 +169,10 @@
       ></a-box>
           
          
-     //เมฆ2
+     <!---เมฆ2--->
         <a-box position="-150 80 20" depth="30" height="10" width="50" color="#ffffff"
          animation="
-      property: position; 
+      property: posi<!---on; --->
       to: -140 120 20; 
       dur: 8000; 
       easing:   easeInOutQuad; 
@@ -193,7 +189,7 @@
       dir:alternate;
       " ></a-box>
   
-        //เมฆ3
+        <!---เมฆ3--->
         <a-box position="-50 160 -60" depth="30" height="10" width="50" color="#FFFFFF"
          animation="
       property: position; 
@@ -222,7 +218,7 @@
       dir:alternate;
       " ></a-box>
   
-         //เมฆ4
+         <!---เมฆ4--->
         <a-box position="10 120 -150" depth="30" height="10" width="50" color="#FFFFFF"
          animation="
       property: position; 
@@ -241,7 +237,7 @@
       loop: true;
       dir:alternate;
       " ></a-box>
-   //sun
+   <!---sun--->
      <a-sphere position="20 300 -80" radius="20" color="hsl(7, 100%, 45%)"
        animation="
       property: position; 
